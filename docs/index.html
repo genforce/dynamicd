@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- === Header Starts === -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>DynamicD</title>
+
+  <link href="./assets/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/font.css" rel="stylesheet" type="text/css">
+  <link href="./assets/style.css" rel="stylesheet" type="text/css">
+</head>
+<!-- === Header Ends === -->
+
+
+<body>
+
+
+<!-- === Home Section Starts === -->
+<div class="section">
+  <!-- === Title Starts === -->
+  <div class="header">
+    <div class="logo">
+      <a href="https://genforce.github.io/" target="_blank"><img src="./assets/genforce.png"></a>
+    </div>
+    <div class="title", style="padding-top: 25pt;">  <!-- Set padding as 10 if title is with two lines. -->
+      Improving GANs with A Dynamic Discriminator
+    </div>
+  </div>
+  <!-- === Title Ends === -->
+  <div class="author">
+    <a href="http://ceyuan.me/" target="_blank">Ceyuan Yang</a><sup>1,3,</sup>*,&nbsp;
+    <a href="http://shenyujun.github.io/" target="_blank">Yujun Shen</a><sup>2,</sup>*,&nbsp;
+    <a href="https://justimyhxu.github.io/" target="_blank">Yinghao Xu</a><sup>1</sup>,&nbsp;
+    <a href="https://sites.google.com/site/zhaodeli/" target="_blank">Deli Zhao</a><sup>2</sup>,&nbsp;
+    <a href="http://daibo.info/" target="_blank">Bo Dai</a><sup>3</sup>,&nbsp;
+    <a href="http://bzhou.ie.cuhk.edu.hk" target="_blank">Bolei Zhou</a><sup>4</sup>
+  </div>
+  <div class="institution">
+    <sup>1</sup> CUHK, 
+    <sup>2</sup> Ant Group, 
+    <sup>3</sup> Shanghai AI Laboratory,
+    <sup>4</sup> UCLA <br>
+  </div>
+  <div class="link">
+    <a href="https://arxiv.org/pdf/xxxx.xxxxx.pdf" target="_blank">[Paper]</a>&nbsp;
+    <a href="https://github.com/genforce/dynamicd" target="_blank">[Code]</a>
+  </div>
+  <div class="teaser">
+    <img src="./assets/teaser.png">
+  </div>
+</div>
+<!-- === Home Section Ends === -->
+
+
+<!-- === Overview Section Starts === -->
+<div class="section">
+  <div class="title">Overview</div>
+  <div class="body">
+    This work aims at adjusting the capacity of a discriminator on-the-fly to better accommodate the time-varying bi-classification task. A comprehensive empirical study confirms that the proposed training strategy, termed as DynamicD, improves the synthesis performance without incurring any additional computation cost or training objectives. Two capacity adjusting schemes are developed for training GANs under different data regimes: i) given a sufficient amount of training data, the discriminator benefits from a progressively increased learning capacity, and ii) when the training data is limited, gradually decreasing the layer width mitigates the over-fitting issue of the discriminator. Experiments on both 2D and 3D-aware image synthesis tasks conducted on a range of datasets substantiate the generalizability of our DynamicD as well as its substantial improvement over the baselines. Furthermore, DynamicD is synergistic to other discriminator-improving approaches (including data augmentation, regularizers, and pre-training), and brings continuous performance gain when combined for learning GANs. 
+  </div>
+</div>
+<!-- === Overview Section Ends === -->
+
+
+<!-- === Result Section Starts === -->
+<div class="section">
+  <div class="title">Results</div>
+  <div class="body">
+    Here we provide synthesis with corresponding FID. Numbers in blue highlight the improvements over baselines.
+
+    <!-- Adjust the number of rows and columns (EVERY project differs). -->
+    <table width="100%" style="margin: 20pt 0; text-align: center;">
+      <tr>
+        <td><img src="./assets/more_results.png" width="95%"></td>
+      </tr>
+    </table>
+
+  </div>
+</div>
+<!-- === Result Section Ends === -->
+
+
+<!-- === Reference Section Starts === -->
+<div class="section">
+  <div class="bibtex">BibTeX</div>
+<pre>
+@article{yang2022improving,
+  title   = {Improving GANs with A Dynamic Discriminator},
+  author  = {Yang, Ceyuan and Shen, Yujun and Xu, Yinghao and Zhao, Deli and Dai, Bo and Zhou, Bolei},
+  article = {arXiv preprint arXiv:xxxx.xxxxx},
+  year    = {2022}
+}
+</pre>
+
+  <!-- BZ: we should give other related work enough credits, -->
+  <!--     so please include some most relevant work and leave some comment to summarize work and the difference. -->
+  <div class="ref">Related Work</div>
+  <div class="citation">
+    <div class="image"><img src="./assets/netaug.png"></div>
+    <div class="comment">
+      <a href="https://arxiv.org/pdf/2110.08890.pdf" target="_blank">
+        H. Cai, C. Gan, J. Lin and S. Han.
+        Network Augmentation For Tiny Deep Learning
+        ICLR, 2022.</a><br>
+      <b>Comment:</b>
+      Introducing network augmentation for improving the performance of tiny neural networks.
+    </div>
+  </div>
+
+</div>
+<!-- === Reference Section Ends === -->
+
+
+</body>
+</html>
