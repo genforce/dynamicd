@@ -16,6 +16,35 @@ This work aims at adjusting the capacity of a discriminator on-the-fly to better
 Here we provide synthesis with corresponding FID. Numbers in blue highlight the improvements over baselines.
 ![image](./docs/assets/more_results.png)
 
+## Training
+
+This repository is built based on [styleGAN2-ada-pytorch](https://github.com/NVlabs/stylegan2-ada-pytorch). In particular, we introduce several options that control the behavior of on-the-fly capacity adjusting:
+
+- `--occupy_start` specifies the capacity ratio in the beginning. 
+- `--occupy_end` specifies the capacity ratio in the end. 
+- `--randomly_select` determines whether to randomly sample a subnet.
+- `--keepd` determines the layers to be excluded from adjusting strategy.
+
+For instance, using the following command enables the increasing strategy:
+```bash
+--occupy_start 0.5 --occupy_end 1.0
+```
+while command like this
+```bash
+--occupy_start 1.0 --occupy_end 0.5 --randomly_select TRUE --keepd 9
+```
+is for the decreasing strategy. 
+
+## TODOs
+
+- [ ] Pretrained weights
+- [ ] Training code verification
+
+
+
+## License
+
+This work is made available under the [Nvidia Source Code License](https://nvlabs.github.io/stylegan2-ada-pytorch/license.html).
 
 ## BibTeX
 
